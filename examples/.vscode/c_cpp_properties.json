@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "~/git/riot/**",
+                "/usr/msp430/include/**",
+                "/usr/local/share/sancus-support/include/**",
+                "/usr/local/share/sancus-compiler/include/**",
+                "/usr/local/share/sancus-compiler/include/**",
+                "/usr/msp430/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/local/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

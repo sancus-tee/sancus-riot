@@ -1,0 +1,5 @@
+/**
+@defgroup    boards_msb430 MSB-430
+@ingroup     boards
+@brief       Support for a Sancus-enabled Stick it 4.0 MSP-430 board
+ */

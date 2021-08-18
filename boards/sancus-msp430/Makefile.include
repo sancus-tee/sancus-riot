@@ -1,0 +1,15 @@
+#USEMODULE += boards_common_msb-430
+# include $(RIOTBOARD)/common/msb-430/Makefile.include
+# We modify this file a little bit to use the sancus loader, so it is pasted below
+
+# set default port depending on operating system
+PORT_LINUX ?= /dev/ttyUSB0
+FPGA_RATE           = 115200
+# setup serial terminal
+include $(RIOTMAKE)/tools/serial.inc.mk
+
+# setup flash tool
+# export PROGRAMMER ?= olimex
+FLASHER ?= sancus-loader
+FLASHFILE ?= $(HEXFILE)
+FFLAGS = "-device $(PORT_LINUX) -baudrate $(FPGA_RATE) $(FLASHFILE)"

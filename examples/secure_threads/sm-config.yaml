@@ -1,0 +1,6 @@
+sancus_sm_timer:
+  - disallow_outcalls: False
+  - sm_entry: "$PROJECT/stubs/sm_entry_scheduler.o"
+  - sm_exit: "$PROJECT/stubs/sm_exit_scheduler.o"
+  - sm_isr: "$SANCUS/sm_isr_basic.o"
+  - peripheral_offset: 159
