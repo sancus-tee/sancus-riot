@@ -24,11 +24,11 @@ The individual elements of Aion are split into the separate Sancus subsystems as
 
 | File | Path | Description |
 | :--- | :--- | :---------- |
-| sched.c | core/ | The scheduler. |
-| secure_mintimer_core.c | sys/secure_mintimer | The secure version of the timer that lives inside the scheduler enclave. |
-| cpu.c  | cpu/msp430-sancus/ | Entry routines into the scheduler. |
-| cpu.h  | cpu/msp430-sancus/include | Main assembly codes for entering and exiting the scheduler. | 
-| Assembly stubs | cpu/msp430-sancus/stubs | Assembly stubs when entering and exiting enclaves such as the scheduler or application enclaves. |
+| [sched.c](core/sched.c) | core/ | The scheduler. |
+| [secure_mintimer_core.c](sys/secure_mintimer/secure_mintimer_core.c) | sys/secure_mintimer | The secure version of the timer that lives inside the scheduler enclave. |
+| [cpu.c](cpu/msp430-sancus/cpu.c)  | cpu/msp430-sancus/ | Entry routines into the scheduler. |
+| [cpu.h](cpu/msp430-sancus/include/cpu.h)  | cpu/msp430-sancus/include | Main assembly codes for entering and exiting the scheduler. | 
+| [Assembly stubs](cpu/msp430-sancus/stubs) | cpu/msp430-sancus/stubs | Assembly stubs when entering and exiting enclaves such as the scheduler or application enclaves. |
 
 
 ## FEATURES
