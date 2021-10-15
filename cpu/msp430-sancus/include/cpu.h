@@ -200,6 +200,9 @@ extern "C" {
     __asm__ ("clr r10");                                            \
     __asm__ ("push r11");                                           \
     __asm__ ("clr r11");                                            \
+    /* Save Scheduler ID as our ocall_id (SM ID 1) */               \
+    /* This will help us later to make sure returns are legit */    \
+    asm("mov #1, &__sm_" #sm "_ssa_ocall_id");                      \
     /* Prepare untrusted sp */                                      \
     __asm__ ("mov &__unprotected_sp, r14");                         \
     /* Save r1 as SP */                                             \
@@ -301,7 +304,7 @@ extern char SM_DATA(sancus_sm_timer) __isr_stack[ISR_STACKSIZE];
     /* Put sm_idx in r6 */                                        \
     __asm__ volatile ("mov.w %0,r6"  : : "m"(sched_active_thread->sm_idx)); \
     /* Put sm_entry of scheduler in r7 */                         \
-    __asm__ volatile ("mov.w &0,r7"  : : "m"(scheduler_entry));             \
+    __asm__ volatile ("mov.w &%0,r7"  : : "m"(scheduler_entry));             \
     /* Put sm_entry of restored func on our stack */                  \
     __asm__ volatile ("mov.w %0,r5"  : : "m"(sched_active_thread->sm_entry));     \
     __asm__ volatile ("push r5");                                           \

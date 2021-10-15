@@ -171,6 +171,7 @@ void kernel_init(void)
     
     // Usually, boot normally. But sometimes we may want to delay boot and do it manually
     #ifdef MANUAL_SCHEDULER_BOOT
+    LOG_INFO("Manual boot requested. Only yielding to main, not initializing scheduler yet.\n")
     ___MACRO_PREPARE_EXITLESS_CALL(EXITLESS_FUNCTION_TYPE_YIELD)
     UNREACHABLE();
     #else 

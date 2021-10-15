@@ -34,7 +34,7 @@ void SM_ENTRY(foo) foo_greet(void)
          * An SM could avoid this by checking current system time before and after the sleep call to verify that sleeping worked..
          */
         pr_info("FOO: Other thread not done yet...I am sleeping.");
-        ___MACRO_CALL_SLEEP_FROM_SM(0x10,0, foo)
+        ___MACRO_CALL_SLEEP_FROM_SM(0x1000,0, foo)
     }
     pr_info("FOO: Hello again. Other thread is done, I am exiting too...\n");
     sm_1_done = true;
@@ -51,7 +51,7 @@ void SM_ENTRY(bar) bar_greet(void)
     ___MACRO_CALL_THREAD_YIELD_FROM_SM(bar);
 
     pr_info("BAR: Hello again. Sleeping for some time...\n");
-    ___MACRO_CALL_SLEEP_FROM_SM(0x00,0, bar)
+    ___MACRO_CALL_SLEEP_FROM_SM(0x1000,0, bar)
 
     pr_info("BAR: Hello again. Exiting...\n");
     sm_2_done = true;

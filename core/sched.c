@@ -62,7 +62,7 @@ SM_DATA(sancus_sm_timer) static uint32_t runqueue_bitcache = 0;
 SM_DATA(sancus_sm_timer) const uint8_t max_threads = ARRAY_SIZE(sched_threads);
 
 SM_DATA(sancus_sm_timer) bool initialization_done = false;
-SM_DATA(sancus_sm_timer) void* scheduler_entry;
+SM_DATA(sancus_sm_timer) volatile void *scheduler_entry;
 
 // We need one scheduler specific timer that the scheduler can use to regain control again after a short time.
 SM_DATA(sancus_sm_timer) secure_mintimer_t scheduler_timer;

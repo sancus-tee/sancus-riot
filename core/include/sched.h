@@ -300,7 +300,7 @@ void SM_ENTRY(sancus_sm_timer) sched_shut_down(void);
  * Pointer to the sm_entry start of the scheduler. Necessary for scheduler to give this
  * address as a return point in r7 when scheduling SMs
  * */
-SM_DATA(sancus_sm_timer) extern void* scheduler_entry;
+SM_DATA(sancus_sm_timer) extern volatile void *scheduler_entry;
 
 /**
  * Flag indicating whether a context switch is necessary after handling an
