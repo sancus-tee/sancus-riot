@@ -1,0 +1,29 @@
+# YAML 1.2
+---
+authors: 
+  -
+    affiliation: "imec-DistriNet, KU Leuven"
+    family-names: Alder
+    given-names: Fritz
+    orcid: "https://orcid.org/0000-0001-9607-7798"
+  -
+    affiliation: "imec-DistriNet, KU Leuven"
+    family-names: "Van Bulck"
+    given-names: Jo
+  -
+    affiliation: "imec-DistriNet, KU Leuven"
+    family-names: Piessens
+    given-names: Frank
+  -
+    affiliation: "imec-DistriNet, KU Leuven"
+    family-names: "Mühlberg"
+    given-names: "Jan Tobias"
+cff-version: "1.1.0"
+date-released: 2021-11-15
+doi: "10.1145/3460120.3484782"
+license: "LGPL-2.1"
+message: "If you use this software, please cite it using these metadata."
+repository-code: "https://github.com/fritzalder/sancus-riot/"
+title: "Aion: Enabling Open Systems through Strong Availability Guarantees for Enclaves"
+version: "1.0"
+...
